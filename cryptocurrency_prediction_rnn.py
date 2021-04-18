@@ -33,7 +33,7 @@ ratios = ['BTC-USD', 'LTC-USD', 'BCH-USD', 'ETH-USD']  # the 4 ratios we want to
 
 for ratio in ratios:
   print(ratio)
-  dataset = f'/content/drive/MyDrive/Colab Notebooks/DL Basics with python and Keras Sentdex/crypto_data/{ratio}.csv'    # get the full path to the file.
+  dataset = f'{ratio}.csv'    # get the full path to the file.
   df = pd.read_csv(dataset, names = ['time', 'low', 'high', 'open', 'close', 'volume'])   # read in specific file
 
   # rename volume and close to include the ticker so we can still which close/volume is which:
